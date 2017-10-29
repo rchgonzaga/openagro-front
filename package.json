@@ -1,0 +1,52 @@
+{
+  "name": "codemash-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "open": "node buildTools/srcServer.js",
+    "start": "npm-run-all --parallel open test",
+    "test": "jest --watchAll"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-latest": "^6.24.1",
+    "eslint-loader": "^1.9.0",
+    "express": "^4.16.2",
+    "jest": "^21.2.1",
+    "npm-run-all": "^4.1.1",
+    "open": "^0.0.5",
+    "webpack": "^3.8.1",
+    "webpack-dev-middleware": "^1.12.0",
+    "webpack-hot-middleware": "^2.20.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended"
+    ],
+    "parseOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module"
+    },
+    "env": {
+      "browser": true,
+      "jest": true
+    },
+    "rules": {
+      "no-cache": "off",
+      "no-debugger": "warn"
+    }
+  },
+  "babel": {
+    "presets": [
+      "latest"
+    ]
+  },
+  "devDependencies": {
+    "eslint-stylish": "^0.2.0",
+    "jest-cli": "^21.2.1"
+  }
+}
